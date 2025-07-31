@@ -12,7 +12,7 @@ from musicLibrary import music
 # --- Configuration ---
 TEMP_AUDIO_DIR = "temp_audio"
 GROQ_API_KEY = "gsk_your_actual_api_key_here"
-NEWSAPI_KEY = "955b9166a078448f81a3aa911a91ffba" 
+NEWSAPI_KEY = "" 
 
 # --- Clean up temp_audio folder on startup ---
 if not os.path.exists(TEMP_AUDIO_DIR):
@@ -29,7 +29,7 @@ else:
 # --- Init libraries ---
 recognizer = sr.Recognizer()
 pygame.mixer.init()
-client = Groq(api_key="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")
+client = Groq(api_key="GROQ_API_KEY")
 
 def speak(text):
     print(f"Speaking: {text}")
